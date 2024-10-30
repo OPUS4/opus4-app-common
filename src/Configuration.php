@@ -41,6 +41,18 @@ use Zend_Exception;
 use Zend_Locale;
 use Zend_Translate;
 
+use function array_map;
+use function count;
+use function explode;
+use function filter_var;
+use function in_array;
+use function is_array;
+use function key;
+use function reset;
+
+use const DIRECTORY_SEPARATOR;
+use const FILTER_VALIDATE_BOOLEAN;
+
 /**
  * Klasse für das Laden von Übersetzungsressourcen.
  */
