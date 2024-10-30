@@ -60,16 +60,10 @@ class Configuration extends Config
 {
     use LoggingTrait;
 
-    /**
-     * Defaultsprache.
-     */
+    /** Defaultsprache. */
     public const DEFAULT_LANGUAGE = 'en';
 
-    /**
-     * Unterstützte Sprachen.
-     *
-     * @var array
-     */
+    /** @var array Unterstützte Sprachen. */
     private $supportedLanguages;
 
     /** @var string[] */

@@ -44,18 +44,10 @@ use function in_array;
  */
 class Module implements ModuleInterface
 {
-    /**
-     * Name (also folder) of module.
-     *
-     * @var string
-     */
+    /** @var string Name (also folder) of module. */
     private $name;
 
-    /**
-     * Short module description.
-     *
-     * @var string
-     */
+    /** @var string Short module description. */
     private $description;
 
     /**

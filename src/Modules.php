@@ -50,32 +50,16 @@ use const DIRECTORY_SEPARATOR;
  */
 class Modules
 {
-    /**
-     * Instance of modules manager.
-     *
-     * @var self
-     */
+    /** @var self Instance of modules manager. */
     private static $moduleManager;
 
-    /**
-     * Path for modules.
-     *
-     * @var string
-     */
+    /** @var string Path for modules. */
     private $modulesPath;
 
-    /**
-     * Descriptors for all modules.
-     *
-     * @var array
-     */
+    /** @var array Descriptors for all modules. */
     private $modules;
 
-    /**
-     * Descriptors for explicitly registered modules.
-     *
-     * @var array
-     */
+    /** @var array Descriptors for explicitly registered modules. */
     private $registeredModules = [];
 
     /**
