@@ -37,9 +37,7 @@ use Zend_Config;
 use Zend_Config_Exception;
 use Zend_Config_Writer_Xml;
 use Zend_Config_Xml;
-use Zend_Exception;
 use Zend_Locale;
-use Zend_Translate;
 
 use function array_map;
 use function count;
@@ -303,17 +301,6 @@ class Configuration extends Config
     public static function clearInstance()
     {
         self::$instance = null;
-    }
-
-    /**
-     * Returns Zend_Translate instance for application.
-     *
-     * @return Zend_Translate
-     * @throws Zend_Exception
-     */
-    public function getTranslate()
-    {
-        return Application_Translate::getInstance();
     }
 
     /**
