@@ -29,9 +29,9 @@
  * @license     http://www.gnu.org/licenses/gpl.html General Public License
  */
 
-namespace OpusTest\Application\Config;
+namespace OpusTest\App\Common\Config;
 
-use Opus\Application\Config\MaxUploadSize;
+use Opus\App\Common\Config\MaxUploadSize;
 use Opus\Common\Config;
 use PHPUnit\Framework\TestCase;
 use Zend_Config;

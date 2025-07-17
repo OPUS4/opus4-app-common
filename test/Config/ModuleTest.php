@@ -29,10 +29,10 @@
  * @license     http://www.gnu.org/licenses/gpl.html General Public License
  */
 
-namespace OpusTest\Application\Config;
+namespace OpusTest\App\Common\Config;
 
-use Opus\Application\Config\Module;
-use Opus\Application\Modules;
+use Opus\App\Common\Config\Module;
+use Opus\App\Common\Modules;
 use PHPUnit\Framework\TestCase;
 
 class ModuleTest extends TestCase

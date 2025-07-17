@@ -29,7 +29,7 @@
  * @license     http://www.gnu.org/licenses/gpl.html General Public License
  */
 
-namespace Opus\Application;
+namespace Opus\App\Common;
 
 use Opus\Common\Config;
 use Opus\Common\LoggingTrait;

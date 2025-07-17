@@ -29,9 +29,9 @@
  * @license     http://www.gnu.org/licenses/gpl.html General Public License
  */
 
-namespace Opus\Application\Config;
+namespace Opus\App\Common\Config;
 
-use Opus\Application\Modules;
+use Opus\App\Common\Modules;
 use Opus\Common\UserRole;
 
 use function in_array;

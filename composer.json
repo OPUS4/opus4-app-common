@@ -25,12 +25,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Opus\\Application\\": "src/"
+      "Opus\\App\\Common\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "OpusTest\\Application\\": "test/"
+      "OpusTest\\App\\Common\\": "test/"
     }
   },
   "minimum-stability": "dev",

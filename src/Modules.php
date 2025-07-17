@@ -29,10 +29,10 @@
  * @license     http://www.gnu.org/licenses/gpl.html General Public License
  */
 
-namespace Opus\Application;
+namespace Opus\App\Common;
 
 use DirectoryIterator;
-use Opus\Application\Config\Module;
+use Opus\App\Common\Config\Module;
 
 use function array_key_exists;
 use function array_merge;

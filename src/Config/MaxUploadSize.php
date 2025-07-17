@@ -29,7 +29,7 @@
  * @license     http://www.gnu.org/licenses/gpl.html General Public License
  */
 
-namespace Opus\Application\Config;
+namespace Opus\App\Common\Config;
 
 use Opus\Common\Config;
 use Opus\Common\Log;
