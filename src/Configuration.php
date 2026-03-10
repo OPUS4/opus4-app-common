@@ -80,7 +80,7 @@ class Configuration extends Config
     private static $instance;
 
     /** @var string */
-    private static $configPath = APPLICATION_PATH . '/config';
+    private static $configPath;
 
     /**
      * Returns instance of class.
