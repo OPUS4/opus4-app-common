@@ -45,6 +45,7 @@ use function explode;
 use function filter_var;
 use function in_array;
 use function is_array;
+use function is_readable;
 use function key;
 use function reset;
 
@@ -53,6 +54,8 @@ use const FILTER_VALIDATE_BOOLEAN;
 
 /**
  * Klasse für das Laden von Übersetzungsressourcen.
+ *
+ * TODO Is 'static' necessary here?
  */
 class Configuration extends Config
 {
@@ -75,6 +78,9 @@ class Configuration extends Config
 
     /** @var self */
     private static $instance;
+
+    /** @var string */
+    private static $configPath = APPLICATION_PATH . '/config';
 
     /**
      * Returns instance of class.
@@ -270,16 +276,34 @@ class Configuration extends Config
         $config->merge($update);
 
         $writer = new Zend_Config_Writer_Xml();
-        $writer->write(APPLICATION_PATH . '/application/configs/config.xml', $config);
+        $writer->write(self::getConfigPath(), $config);
     }
 
     /**
-     * @return Zend_Config_Xml
+     * @return Zend_Config
      * @throws Zend_Config_Exception
      */
     public static function load()
     {
-        return new Zend_Config_Xml(APPLICATION_PATH . '/application/configs/config.xml', null, true);
+        $configPath = self::getConfigPath();
+        if (is_readable($configPath)) {
+            return new Zend_Config_Xml(self::getConfigPath(), null, true);
+        }
+        return new Zend_Config([], true);
+    }
+
+    public static function getConfigPath(): string
+    {
+        if (self::$configPath === null) {
+            self::$configPath = APPLICATION_PATH . '/application/configs/config.xml';
+        }
+
+        return self::$configPath;
+    }
+
+    public static function setConfigPath(string|null $path): void
+    {
+        self::$configPath = $path;
     }
 
     /**

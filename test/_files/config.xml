@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<zend-config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
+    <searchengine>
+        <solr>
+            <parameterDefaults>
+                <rows>15</rows>
+            </parameterDefaults>
+        </solr>
+    </searchengine>
+    <browsing>
+        <series>
+            <sortByTitle>0</sortByTitle>
+        </series>
+    </browsing>
+</zend-config>
