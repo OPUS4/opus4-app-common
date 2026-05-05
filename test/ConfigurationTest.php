@@ -55,4 +55,10 @@ class ConfigurationTest extends TestCase
         $this->assertNotNull($config);
         $this->assertInstanceOf(Zend_Config::class, $config);
     }
+
+    public function testGetDefaultLanguage()
+    {
+        $this->markTestIncomplete('TODO setup configuration');
+        $lang = Configuration::getInstance()->getDefaultLanguage();
+    }
 }
