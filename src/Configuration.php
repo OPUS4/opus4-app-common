@@ -56,6 +56,7 @@ use const FILTER_VALIDATE_BOOLEAN;
  * Klasse für das Laden von Übersetzungsressourcen.
  *
  * TODO Is 'static' necessary here?
+ * TODO refactor language functions
  */
 class Configuration extends Config
 {
@@ -172,7 +173,7 @@ class Configuration extends Config
      */
     public function isLanguageSupported($language)
     {
-        $languages = $this->getSupportedLanguages();
+        $languages = $this->getActivatedLanguages();
         return in_array($language, $languages);
     }
 
@@ -184,7 +185,7 @@ class Configuration extends Config
     public function getDefaultLanguage()
     {
         if ($this->defaultLanguage === null) {
-            $languages             = $this->getSupportedLanguages();
+            $languages             = $this->getActivatedLanguages();
             $this->defaultLanguage = $languages[0];
 
             if ($this->isLanguageSelectionEnabled()) {
